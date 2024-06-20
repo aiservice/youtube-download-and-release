@@ -23,9 +23,14 @@ jobs:
           #you-get --itag=136 -O ./result/1917541 -k --debug 'https://www.youtube.com/watch?v=-7njmMDeBa9c'
 
           sudo apt-get install ffmpeg curl -y
-          curl -L https://git.io/vQhTU | bash -s -- --version 1.22
-          go install github.com/iawia002/lux@latest
-          lux -f 136 -O ./result/2295101 'https://www.youtube.com/watch?v=9E1aDs7WVI4'
+          wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz -O go.tar.gz
+          sudo tar -xzvf go.tar.gz -C /usr/local
+          echo export PATH=$HOME/go/bin:/usr/local/go/bin:$PATH >> ~/.profile
+          source ~/.profile
+          go version
+          #curl -L https://git.io/vQhTU | bash -s -- --version 1.22
+          #go install github.com/iawia002/lux@latest
+          #lux -f 136 -O ./result/2295101 'https://www.youtube.com/watch?v=9E1aDs7WVI4'
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
