@@ -24,8 +24,8 @@ jobs:
 
           sudo apt-get install ffmpeg curl
           wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-          wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O ~/.local/bin/yt-dlp
-          chmod a+rx ~/.local/bin/yt-dlp
+          wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
+          chmod a+rx /usr/local/bin/yt-dlp
           yt-dlp -f 136+140 --merge-output-format mp4 -o ./result/2295101.mp4 'https://www.youtube.com/watch?v=9E1aDs7WVI4'
           
           #sudo apt-get install ffmpeg curl -y
