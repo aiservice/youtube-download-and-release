@@ -22,7 +22,7 @@ jobs:
           #pip3 install you-get
           #you-get --itag=136 -O ./result/1917541 -k --debug 'https://www.youtube.com/watch?v=-7njmMDeBa9c'
 
-          sudo apt-get install ffmpeg curl
+          sudo apt-get install ffmpeg
           wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
           yt-dlp -f 136+140 --merge-output-format mp4 -o ./result/2303992.mp4 'https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=y7K-rMz3fUM'
